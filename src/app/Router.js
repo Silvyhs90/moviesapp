@@ -1,15 +1,19 @@
 import React from 'react'
-import { BrowserRouter, Route } from 'react-router-dom'
+import { BrowserRouter, Route, Switch} from 'react-router-dom'
 import {Home} from '../pages/Home'
+import {About} from '../pages/About'
+
+
 
 
 export const Router = () => {
-    
-    return(
+
+ return (
     <BrowserRouter>
-           <div className="App">
+         <Switch>
              <Route exact path="/" component={Home} />
-           </div>
+             <Route exact path="/about" component={About} />
+          </Switch>
     </BrowserRouter>
     );
 };

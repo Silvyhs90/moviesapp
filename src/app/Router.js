@@ -25,7 +25,7 @@ export const Router = () => {
             <Route exact path="/about" component={About} />
             <Route exact path="/movie" component={Search} />
             <Route exact path="/show" component={SearchTv} />
-            <Route components={PageNotFound} />
+            <Route component={PageNotFound} />
           </Switch>
     </BrowserRouter>
     );

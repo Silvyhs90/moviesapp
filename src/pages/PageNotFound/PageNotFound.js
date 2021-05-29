@@ -2,25 +2,23 @@ import React from 'react'
 import styled from "styled-components"
 
 
-export const About = () => {
+export const PageNotFound = () => {
 
 
     return (
-        <AboutMe>
-            <h3>Sobre Mi</h3>
+        <Error>
+            <h3>ERROR 404</h3>
 
-        </AboutMe>
+        </Error>
     );
 };
 
 
-const AboutMe = styled.div`
+const Error = styled.div`
   width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-size: cover;
-  background-color:red;
 `;

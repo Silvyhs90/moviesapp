@@ -1,22 +1,22 @@
-import React, { useEffect, useState } from 'react'
+import React  from 'react'
 import styled from "styled-components"
-import {Movie} from '../components/Movie'
-import {MovieLogoUrl} from './constants'
+import {TvShow} from '../../components/TvShow'
 
-const FEATURED_API = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=600d38b9ea12ad8eed83670ed81d230c&page=1";
-const SEARCH_API = "https://api.themoviedb.org/3/search/movie?&api_key=600d38b9ea12ad8eed83670ed81d230c&query=";
 
-export const Home = () => {
+const FEATURED_API = "https://api.themoviedb.org/3/discover/tv?sort_by=name&api_key=600d38b9ea12ad8eed83670ed81d230c&page=1";
+const SEARCH_API = "https://api.themoviedb.org/3/search/tv?api_key=600d38b9ea12ad8eed83670ed81d230c&query=";
 
-   const [movies, setMovies ] = useState([]);  //vacio
-   const [searchTerm, seSearchTerm] = useState("");
+export const SearchTv= () => {
+
+   const [tvShow, setTvShow ] = React.useState([]);  //vacio
+   const [searchTerm, seSearchTerm] = React.useState("");
 
    
-   useEffect(() => {
+   React.useEffect(() => {
         fetch(FEATURED_API)
         .then((res) => res.json())
         .then((data) => {
-                setMovies(data.results);
+                setTvShow(data.results);
         });
     }, []);
 
@@ -27,7 +27,7 @@ export const Home = () => {
         fetch(SEARCH_API+searchTerm)
         .then((res) => res.json())
         .then((data) => {
-                setMovies(data.results);
+                setTvShow(data.results);
         });
 
     };
@@ -39,16 +39,15 @@ export const Home = () => {
     return (
         <HomePage>
          <Wrapper>
-        <MoviesLogo src={MovieLogoUrl} alt ="Logo pagina"/>
         <form onSubmit={handleOnSubmit}>
         <SearchBar
             type="search" 
-            placeholder="Buscar.." 
+            placeholder="Buscar Show.." 
             value={searchTerm}
             onChange={handleOnChange}
             />
         </form>
-        <div className="movie">{movies.length > 0 && movies.map((movie) => <Movie key={movie.id} {...movie}/> )}</div>
+        <div className="tv">{tvShow.length > 0 && tvShow.map((tvShow) => <TvShow key={tvShow.id} {...tvShow}/> )}</div>
        </Wrapper>
         </HomePage>
     );
@@ -60,11 +59,6 @@ const HomePage = styled.div`
   display:flex;
   flex-wrap: wrap;
 `
-
-    const MoviesLogo = styled.div`
-    width: 350px;
-    align-items: center;
-    `
 
     const Wrapper= styled.div`
     display: flex;

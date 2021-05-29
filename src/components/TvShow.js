@@ -4,17 +4,17 @@ import styled from 'styled-components'
 const IMG_API="https://image.tmdb.org/t/p/w1280";
 
 
-export const Movie= ({title, poster_path, overview, vote_average, release_date}) => {
+export const TvShow= ({name, poster_path, overview, number_of_episodes, origin_country}) => {
 
     return (
 
     <Header>      
-       <img src={poster_path ? (IMG_API+ poster_path) : 'https://www.abajournal.com/images/mag_images/0818_FMOVIES_BACKGROUND.jpg'} alt={title} />
+       <img src={poster_path ? (IMG_API+ poster_path) : 'https://www.abajournal.com/images/mag_images/0818_FMOVIES_BACKGROUND.jpg'} alt={name} />
         <Wrapper>
             <div className="cont">
-            <h3>{title}</h3>
-            <h4>{release_date}</h4>
-            <span>{vote_average}</span>
+            <h3>{name}</h3>
+            <h4>{origin_country}</h4>
+            <span>{number_of_episodes}</span>
             </div>
         <View>
             <h2>Sinopsis:</h2>

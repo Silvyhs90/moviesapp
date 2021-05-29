@@ -1,1 +1,0 @@
-export const MovieLogoUrl="kisspng-art-film-logo-cinema-clip-art-movie-logo-cliparts-5ab587fb2edc64.812960291521846267192";

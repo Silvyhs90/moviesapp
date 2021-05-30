@@ -40,14 +40,16 @@ export const SearchTv= () => {
         <HomePage>
          <Wrapper>
         <form onSubmit={handleOnSubmit}>
-        <SearchBar
+        <SearchBar 
             type="search" 
-            placeholder="Buscar Show.." 
+            placeholder="Search Tv Show.." 
             value={searchTerm}
             onChange={handleOnChange}
             />
         </form>
-        <div className="tv">{tvShow.length > 0 && tvShow.map((tvShow) => <TvShow key={tvShow.id} {...tvShow}/> )}</div>
+        <div className="tv-container">
+            {tvShow.length > 0 && tvShow.map((tvShow) => <TvShow key={tvShow.id} {...tvShow}/> )}
+            </div>
        </Wrapper>
         </HomePage>
     );
@@ -66,11 +68,11 @@ const HomePage = styled.div`
     flex-wrap: wrap;
     `
 const SearchBar = styled.input`
-  width: 100%;
+  margin-left: 10px;
   margin-bottom: 20px;
   margin-top:15px;
   font-size: 1.2rem;
-  border:2px solid #22254b;
+  border:2px solid black;
   padding:0.5rem 1.5rem;
-  border-radius:50px;
+  border-radius:60px;
 `;

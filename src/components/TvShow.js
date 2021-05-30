@@ -1,15 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const IMG_API="https://image.tmdb.org/t/p/w1280";
 
+const IMG_API="https://image.tmdb.org/t/p/w1280";
+const notAv="images/background.jpg";
 
 export const TvShow= ({name, poster_path, overview, number_of_episodes, origin_country}) => {
 
     return (
 
     <Header>      
-       <img src={poster_path ? (IMG_API+ poster_path) : 'https://www.abajournal.com/images/mag_images/0818_FMOVIES_BACKGROUND.jpg'} alt={name} />
+       <img src={poster_path ? (IMG_API+ poster_path) : notAv} alt={name} />
         <Wrapper>
             <div className="cont">
             <h3>{name}</h3>

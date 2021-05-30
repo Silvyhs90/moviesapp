@@ -48,13 +48,16 @@ export const Search = () => {
             onChange={handleOnChange}
             />
         </form>
-        <div className="movie">{movies.length > 0 && movies.map((movie) => <Movie key={movie.id} {...movie}/> )}</div>
+        <div className="movie-container">
+            {movies.length > 0 && movies.map((movie) => <Movie key={movie.id} {...movie}/> )}
+            </div>
        </Wrapper>
         </HomePage>
     );
 }
 
 const HomePage = styled.div`
+  
   background-color: #22254b;
   display:flex;
   flex-wrap: wrap;
@@ -64,14 +67,14 @@ const HomePage = styled.div`
     flex-direction: column;
     flex-wrap: wrap;
     `
-const SearchBar = styled.input`
-  width: 100%;
-  margin-bottom: 20px;
-  margin-top:15px;
-  font-size: 1.2rem;
-  border:2px solid #22254b;
-  padding:0.5rem 1.5rem;
-  border-radius:50px;
-`;
+    const SearchBar = styled.input`
+    margin-left: 10px;
+    margin-bottom: 20px;
+    margin-top:15px;
+    font-size: 1.2rem;
+    border:2px solid black;
+    padding:0.5rem 1.5rem;
+    border-radius:60px;
+    `;
 
 

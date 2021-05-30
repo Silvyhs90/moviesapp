@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from "styled-components"
+import error from "../../images/notfound.png"
 
 
 export const PageNotFound = () => {
@@ -8,7 +9,8 @@ export const PageNotFound = () => {
     return (
         <Error>
              <div>
-             <h1>404 - Not Found!</h1>
+             <h1>Pagina No encontrada</h1>
+             <img src={error} className="imagen-error" alt="error" />
             </div>
 
         </Error>
@@ -17,10 +19,17 @@ export const PageNotFound = () => {
 
 
 const Error = styled.div`
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    height: 100%;
+    width: 100% ;
+    text-align: center;
+
+    h1{
+        text-align: center;
+        font-weight: bolder;
+        margin-top: 15px;
+        color: white;
+        text-shadow: 1px 2px black;
+    }
+    
+
 `;

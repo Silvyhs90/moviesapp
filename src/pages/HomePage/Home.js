@@ -41,24 +41,29 @@ export const Home = () => {
     return (
         <HomePage>
          <Wrapper>
-        <div className="movie">{movies.length > 0 && movies.map((movie) => <Movie key={movie.id} {...movie}/>)}</div>
-        <div className="movie">{movies2.length > 0 && movies2.map((movie) => <Movie key={movie.id} {...movie}/>)}</div>
-        <div className="movie">{movies3.length > 0 && movies3.map((movie) => <Movie key={movie.id} {...movie}/>)}</div>
+        <div className="movie-container">
+        {movies.length > 0 && movies.map((movie) => <Movie key={movie.id} {...movie}/>)}
+        {movies2.length > 0 && movies2.map((movie) => <Movie key={movie.id} {...movie}/>)}
+        {movies3.length > 0 && movies3.map((movie) => <Movie key={movie.id} {...movie}/>)}
+        </div>
        </Wrapper>
         </HomePage>
-    );
+    ); 
 };
 
 const HomePage = styled.div`
-  
+  display:block; 
+  display:inline-block;
   background-color: #22254b;
   flex-wrap: wrap;
 `
 
 
     const Wrapper= styled.div`
+    display:block; display:inline-block;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     `
+
 

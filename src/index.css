@@ -3,13 +3,62 @@
   box-sizing: border-box;
 }
 
+.movie-container{
+  display:flex;
+  flex-wrap: wrap;
+
+}
+
+img{
+  width: 100%;
+}
+
+.imagen2{
+  width: 20%;
+  padding-top: 20px;
+}
+
+.imagen-error{
+  width: 60%;
+}
+
+.tv-container{
+  display:flex;
+  flex-wrap: wrap;
+
+}
+
+
+.movie{
+  display:block;
+  display:inline-block;
+  margin: 1rem;
+}
+
+
+.imagen{
+  background-image: url("./images/logo.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  width: 150px;
+  height: 60px;
+  border-top-width: 150px;
+  background-color: black;
+  padding-top:10px;
+  
+ }
+ 
+.contenedor{
+  background-color: black;
+  padding-top: 10px;
+}
 
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color:#22254b;
+  background-color:black;
  
 }
 
@@ -22,11 +71,11 @@ li a {
   display: block;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 10px 15px;
   text-decoration: none;
 }
 
-/* Change the link color to #111 (black) on hover */
+
 li a:hover {
   background-color: #111;
 }
@@ -40,9 +89,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.texto{
-  background-color: blueviolet;
-}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

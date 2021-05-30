@@ -1,18 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
-
+import notAv from "../images/background.jpg"
 
 const IMG_API="https://image.tmdb.org/t/p/w1280";
-const notAv="images/background.jpg";
+
 
 export const TvShow= ({name, poster_path, overview, number_of_episodes, origin_country}) => {
 
     return (
 
     <Header>      
-       <img src={poster_path ? (IMG_API+ poster_path) : notAv} alt={name} />
+       <img src={poster_path ? (IMG_API+ poster_path) : notAv } alt={name} />
         <Wrapper>
-            <div className="cont">
+            <div>
             <h3>{name}</h3>
             <h4>{origin_country}</h4>
             <span>{number_of_episodes}</span>
@@ -55,11 +55,7 @@ const Wrapper= styled.div`
         padding:1rem;
         justify-content: space-between;
         transition: transform 0.3s ease-in-out;
-        
-        .container{
-           display: flex;
-           flex-wrap: wrap;
-        }
+
         
         &:hover{
             transform:translateY(-8px)
@@ -79,7 +75,7 @@ const View = styled.div`
         left:0;
         right:0;
         padding:1rem;
-        transform: translateX(100%);
+        transform: translateY(100%);
         max-height:100%;
         border-top-left-radius: 3px;
         border-top-right-radius: 3px;

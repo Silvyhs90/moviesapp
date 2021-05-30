@@ -1,8 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
+import notAv from "../images/background.jpg"
 
 const IMG_API="https://image.tmdb.org/t/p/w1280";
-const notAv="images/background.jpg";
+
 
 export const Movie = ({title, poster_path, overview, vote_average, release_date}) => {
 
@@ -24,7 +25,6 @@ export const Movie = ({title, poster_path, overview, vote_average, release_date}
     </Header>
     );
 };
-
 
 
 const Header = styled.div`
@@ -55,11 +55,7 @@ const Wrapper= styled.div`
         padding:1rem;
         justify-content: space-between;
         transition: transform 0.3s ease-in-out;
-        
-        .container{
-           display: flex;
-           flex-wrap: wrap;
-        }
+
         
         &:hover{
             transform:translateY(-8px)
@@ -79,7 +75,7 @@ const View = styled.div`
         left:0;
         right:0;
         padding:1rem;
-        transform: translateX(100%);
+        transform: translateY(100%);
         max-height:100%;
         border-top-left-radius: 3px;
         border-top-right-radius: 3px;

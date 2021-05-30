@@ -29,7 +29,9 @@ export const Search = () => {
         .then((res) => res.json())
         .then((data) => {
                 setMovies(data.results);
-        });
+     });
+
+       
 
     };
 

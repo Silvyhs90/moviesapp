@@ -1,12 +1,14 @@
 import React  from 'react'
 import styled from "styled-components"
 import {Movie} from '../../components/Movie'
-import portada from "../../images/cruella.jpg"
+import portada from "../../images/scream.jpg"
 
 const FEATURED_API1 = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=600d38b9ea12ad8eed83670ed81d230c&page=1";
 const FEATURED_API2 = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=600d38b9ea12ad8eed83670ed81d230c&page=2";
 const FEATURED_API3 = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=600d38b9ea12ad8eed83670ed81d230c&page=3";
-const TOP_RATED="https://api.themoviedb.org/3/movie/top_rated?api_key=600d38b9ea12ad8eed83670ed81d230c&language=en-US&page=1";
+const TOP_RATED="https://api.themoviedb.org/3/movie/upcoming?api_key=600d38b9ea12ad8eed83670ed81d230c&language=en-US&page=1";
+
+//const PORT= "https://api.themoviedb.org/3/movie/646385?api_key=600d38b9ea12ad8eed83670ed81d230c&language=en-US";
 
 export const Home = () => {
 
@@ -55,14 +57,12 @@ export const Home = () => {
              <Wrapper> 
                  <div className="imagen-texto">
                  <img src={portada} className="imagen-portada" alt="portada" />
-                    <h1>CRUELLA 2021</h1>
-                <p>In 1970s London amidst the punk rock revolution, a young grifter named Estella is determined to make a name for herself with her designs. 
-                    She befriends a pair of young thieves who appreciate her appetite for mischief, and together they are able to build a life for themselves on the London streets. 
-                    One day, Estella’s flair for fashion catches the eye of the Baroness von Hellman, a fashion legend who is devastatingly chic and terrifyingly haute. 
-                    But their relationship sets in motion a course of events and revelations that will cause Estella to embrace her wicked side and become the raucous, fashionable and revenge-bent Cruella.
+                    <h1>SCREAM 2022</h1>
+                <p>
+                Twenty-five years after the original series of murders in Woodsboro, a new Ghostface emerges, and Sidney Prescott must return to uncover the truth.
                     </p>
                     </div>   
-               <h1>MOVIES BY TOP RATED</h1>
+               <h1>UPCOMING MOVIES</h1>
             <div className="movie-container">
             {moviesRated.length > 0 && moviesRated.map((movie) => <Movie key={movie.id} {...movie}/>)}
             </div>

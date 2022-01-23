@@ -9,9 +9,9 @@ export const About = () => {
     return (
         <AboutMe>
             <img src={aboutme} className="imagen2" alt="about me" />
-            <h1>API hecha con React para la materia Aplicaciones Moviles</h1>
-            <h2> Realizada por Silvina Saucedo </h2>
-            <h3>API usada: https://www.themoviedb.org/ </h3>
+            <h1>Github: https://github.com/Silvyhs90</h1>
+            <h2> BY Silvina Saucedo </h2>
+            <h3>API: https://www.themoviedb.org/ </h3>
         </AboutMe>
     );
 };

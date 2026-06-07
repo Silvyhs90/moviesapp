@@ -1,0 +1,6 @@
+export * from './HomePage/index'
+export * from './MovieCard/index'
+export * from './PageNotFound/index'
+export * from './About/index'
+export * from './TvCard/index'
+export * from './Favorites/index'
